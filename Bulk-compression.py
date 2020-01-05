@@ -1,7 +1,7 @@
 import subprocess as sb
 import os
 path=input("Enter Path to perform compression(Use format E:\Seasons\Silicon.Valley.2014): ")##Enter path in this format E:\Seasons\Silicon.Valley.2014
-ls=os.listdir(path)
+ls=[name for name in os.listdir(path) if os.path.isdir(os.path.join(path, name)) ]
 for i in ls:
     s=path+"\\"+i
     d=s+".zip"
